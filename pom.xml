@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.1.0</modelVersion>
   <groupId>io.quarkus.sample</groupId>
   <artifactId>super-heroes</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
   <name>Quarkus Sample :: Super-Heroes</name>
-  <modules>
-    <module>event-statistics</module>
-    <module>grpc-locations</module>
-    <module>rest-fights</module>
-    <module>rest-heroes</module>
-    <module>rest-narration</module>
-    <module>rest-villains</module>
-    <module>ui-super-heroes</module>
-    <module>scripts/jmeter</module>
-    <module>docs</module>
-  </modules>
+  <subprojects>
+    <subproject>event-statistics</subproject>
+    <subproject>grpc-locations</subproject>
+    <subproject>rest-fights</subproject>
+    <subproject>rest-heroes</subproject>
+    <subproject>rest-narration</subproject>
+    <subproject>rest-villains</subproject>
+    <subproject>ui-super-heroes</subproject>
+    <subproject>scripts/jmeter</subproject>
+    <subproject>docs</subproject>
+  </subprojects>
   <organization>
     <name>Quarkus</name>
     <url>https://quarkus.io</url>

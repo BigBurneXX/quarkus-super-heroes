@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.1.0</modelVersion>
   <groupId>io.quarkus.sample.super-heroes</groupId>
   <artifactId>grpc-locations</artifactId>
   <version>1.0</version>
@@ -9,7 +9,7 @@
   <description>The Locations gRPC Service</description>
   <properties>
     <assertj.version>3.27.7</assertj.version>
-    <compiler-plugin.version>3.15.0</compiler-plugin.version>
+    <compiler-plugin.version>3.16.0</compiler-plugin.version>
     <kotlin.version>2.4.0</kotlin.version>
     <maven.compiler.release>25</maven.compiler.release>
     <mockk.version>3.1.0</mockk.version>
@@ -23,7 +23,7 @@
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>3.36.3</quarkus.platform.version>
     <quarkus.test.arg-line/>
-    <surefire-plugin.version>3.5.6</surefire-plugin.version>
+    <surefire-plugin.version>3.6.1</surefire-plugin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -326,7 +326,7 @@
               </execution>
               <execution>
                 <id>report</id>
-                <phase>post-integration-test</phase>
+                <phase>after:integration-test</phase>
                 <goals>
                   <goal>report</goal>
                 </goals>
