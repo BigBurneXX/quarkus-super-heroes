@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
   <groupId>io.quarkus.sample.super-heroes</groupId>
   <artifactId>ui-super-heroes</artifactId>
   <version>1.0</version>
@@ -9,7 +8,7 @@
   <description>The user interface</description>
   <properties>
     <assertj.version>3.27.7</assertj.version>
-    <compiler-plugin.version>3.15.0</compiler-plugin.version>
+    <compiler-plugin.version>4.0.0-beta-5</compiler-plugin.version>
     <maven.compiler.release>25</maven.compiler.release>
     <microcks.version>0.4.3</microcks.version>
     <helm.version>1.4.0</helm.version>
@@ -137,6 +136,39 @@
     </dependency>
   </dependencies>
   <build>
+    <sources>
+      <source>
+        <targetVersion>${maven.compiler.release}</targetVersion>
+      </source>
+    </sources>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>4.0.0-beta-3</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>4.0.0-beta-3</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.5.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.5.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.5.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.22.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
@@ -272,7 +304,7 @@
               </execution>
               <execution>
                 <id>report</id>
-                <phase>post-integration-test</phase>
+                <phase>after:integration-test</phase>
                 <goals>
                   <goal>report</goal>
                 </goals>
