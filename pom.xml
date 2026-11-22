@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
+<<<<<<< Updated upstream
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" root="true">
+=======
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.1.0</modelVersion>
+>>>>>>> Stashed changes
   <groupId>io.quarkus.sample</groupId>
   <artifactId>super-heroes</artifactId>
   <version>1.0</version>
@@ -38,6 +43,7 @@
     <pluginManagement>
       <plugins>
         <plugin>
+<<<<<<< Updated upstream
           <artifactId>maven-install-plugin</artifactId>
           <version>4.0.0-beta-3</version>
         </plugin>
@@ -46,12 +52,26 @@
           <version>4.0.0-beta-3</version>
         </plugin>
         <plugin>
+=======
+          <groupId>org.apache.maven.plugins</groupId>
+>>>>>>> Stashed changes
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.5.0</version>
         </plugin>
         <plugin>
+<<<<<<< Updated upstream
           <artifactId>maven-site-plugin</artifactId>
           <version>3.22.0</version>
+=======
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.2.0</version>
+>>>>>>> Stashed changes
         </plugin>
       </plugins>
     </pluginManagement>

@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<<<<<<< Updated upstream
+=======
+  <modelVersion>4.1.0</modelVersion>
+>>>>>>> Stashed changes
   <groupId>io.quarkus.sample.super-heroes</groupId>
   <artifactId>event-statistics</artifactId>
   <version>1.0</version>
@@ -9,19 +13,21 @@
   <properties>
     <assertj.version>3.27.7</assertj.version>
     <awaitility.version>4.1.1</awaitility.version>
+<<<<<<< Updated upstream
     <compiler-plugin.version>4.0.0-beta-5</compiler-plugin.version>
+=======
+    <compiler-plugin.version>3.16.0</compiler-plugin.version>
+>>>>>>> Stashed changes
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <maven.compiler.release>25</maven.compiler.release>
     <helm.version>1.4.0</helm.version>
     <jacoco.version>0.8.15</jacoco.version>
     <junit5.tree.reporter.version>1.5.1</junit5.tree.reporter.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>3.36.3</quarkus.platform.version>
     <quarkus.test.arg-line/>
-    <surefire-plugin.version>3.5.6</surefire-plugin.version>
+    <surefire-plugin.version>3.6.0</surefire-plugin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -148,6 +154,7 @@
     </dependency>
   </dependencies>
   <build>
+<<<<<<< Updated upstream
     <sources>
       <source>
         <targetVersion>${maven.compiler.release}</targetVersion>
@@ -164,20 +171,45 @@
           <version>4.0.0-beta-3</version>
         </plugin>
         <plugin>
+=======
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+>>>>>>> Stashed changes
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.5.0</version>
         </plugin>
         <plugin>
+<<<<<<< Updated upstream
+=======
+          <groupId>org.apache.maven.plugins</groupId>
+>>>>>>> Stashed changes
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.5.0</version>
         </plugin>
         <plugin>
+<<<<<<< Updated upstream
+=======
+          <groupId>org.apache.maven.plugins</groupId>
+>>>>>>> Stashed changes
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.5.1</version>
         </plugin>
         <plugin>
+<<<<<<< Updated upstream
           <artifactId>maven-site-plugin</artifactId>
           <version>3.22.0</version>
+=======
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.2.0</version>
+>>>>>>> Stashed changes
         </plugin>
       </plugins>
     </pluginManagement>
