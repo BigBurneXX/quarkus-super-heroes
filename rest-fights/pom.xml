@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd" xmlns="http://maven.apache.org/POM/4.1.0"
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
   <groupId>io.quarkus.sample.super-heroes</groupId>
   <artifactId>rest-fights</artifactId>
   <version>1.0</version>
@@ -8,7 +9,7 @@
   <description>The fights RESTful microservice</description>
   <properties>
     <assertj.version>3.27.7</assertj.version>
-    <compiler-plugin.version>4.0.0-beta-5</compiler-plugin.version>
+    <compiler-plugin.version>3.15.0</compiler-plugin.version>
     <mapstruct.version>1.6.3</mapstruct.version>
     <openapi-generator-server.version>2.20.0</openapi-generator-server.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
@@ -258,44 +259,8 @@
       <version>${pact.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct-processor</artifactId>
-      <version>${mapstruct.version}</version>
-      <type>processor</type>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
   <build>
-    <sources>
-      <source>
-        <targetVersion>${maven.compiler.release}</targetVersion>
-      </source>
-    </sources>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>4.0.0-beta-3</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>4.0.0-beta-3</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.5.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.5.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.22.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
@@ -341,6 +306,13 @@
         <version>${compiler-plugin.version}</version>
         <configuration>
           <parameters>${maven.compiler.parameters}</parameters>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>${mapstruct.version}</version>
+            </path>
+          </annotationProcessorPaths>
         </configuration>
       </plugin>
       <plugin>
@@ -472,7 +444,7 @@
               </execution>
               <execution>
                 <id>report</id>
-                <phase>after:integration-test</phase>
+                <phase>post-integration-test</phase>
                 <goals>
                   <goal>report</goal>
                 </goals>
