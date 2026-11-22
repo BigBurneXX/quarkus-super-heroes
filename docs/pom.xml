@@ -28,6 +28,12 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <!-- Pinned because Maven Central's maven-metadata.xml for org.mvnpm:resolve-from does not list 4.0.0, which breaks resolving the [4.0.0,5) range -->
+      <dependency>
+        <groupId>org.mvnpm</groupId>
+        <artifactId>resolve-from</artifactId>
+        <version>4.0.0</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <dependencies>

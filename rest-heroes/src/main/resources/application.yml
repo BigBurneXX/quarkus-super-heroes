@@ -102,6 +102,11 @@ quarkus:
       console:
         level: DEBUG
 
+# Pin the locale in tests so validation messages don't depend on the machine's locale
+"%test":
+  quarkus:
+    default-locale: en
+
 "%prod":
   quarkus:
     hibernate-orm:
